@@ -1,2 +1,2 @@
 # tutorial-Web-Python
-demo for coding micro web framework using Flask
+Example code for coding micro web framework using Flask
