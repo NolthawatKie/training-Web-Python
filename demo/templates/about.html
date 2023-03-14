@@ -1,21 +1,31 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
-        <title>about me</title>
     </head>
     <body>
-        <header>
-
-        </header>
         <div>
             <h1>About Me</h1>
-
             <a href="/">Home</a>
             <a href="/admin">Admin</a>
         </div>
-        <footer>
-
-        </footer>
-
+        <ul>
+            {% for list in myList%}
+            <li>{{list}}</li>
+            {% endfor %}
+        </ul>
     </body>
-</html>
+</html> -->
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>About Me</h1>
+<ul>
+    {% for list in myList%}
+    <li>{{list}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+

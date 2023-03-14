@@ -9,7 +9,8 @@ def index() :
 
 @app.route('/about')
 def about() :
-    return render_template("about.html")
+    lists = ["list1", "list2", "list3"]
+    return render_template("about.html", myList = lists)
 
 @app.route('/admin')
 def admin() :

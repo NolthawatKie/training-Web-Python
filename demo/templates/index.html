@@ -1,16 +1,13 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello</title>
+    <title>about me</title>
 </head>
 <body>
     <h1>Hello Flask</h1>
-    <nav>
-        <a href="/admin">Admin</a>
-        <a href="/about">About Us</a>    
-    </nav>
 
     <img src="../static/picture1.jpg" width=600px height=400px alt="pic1">
 
@@ -18,4 +15,18 @@
     <h1>You're {{myData["age"]}} years old</h1>
     <h1>Your salary is {{myData["salary"]}} THB/month</h1>
 </body> 
-</html>
+</html> -->
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Hello Flask</h1>
+
+<img src="../static/picture1.jpg" width=600px height=400px alt="pic1">
+
+<h1>Hi {{myData["name"]}}</h1>
+<h1>You're {{myData["age"]}} years old</h1>
+<h1>Your salary is {{myData["salary"]}} THB/month</h1>
+
+{% endblock %}
