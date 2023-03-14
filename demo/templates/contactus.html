@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class = "container">
+    <h1>Contact Form</h1>
+    <form action="{{url_for('sendSubmitForm')}}" method="GET">
+        <div class="form-group">
+            <label for="">Your name</label>
+            <input type="text" name = "fname" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Your detail</label>
+            <textarea name="description" class="form-control" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <input type="submit" value="Submit" class="btn btn-success">
+    </form>
+</div>
+
+{% endblock %}

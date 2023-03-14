@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Thank you {{data["name"]}}</h1>
+    <p>Your detail is : {{data["description"]}}</p>
+</div>
+
+<style>
+    .container {
+        padding-top: 1rem;
+    }
+</style>
+
+
+{% endblock %}

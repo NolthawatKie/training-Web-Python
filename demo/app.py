@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -13,6 +13,18 @@ def index():
 def about():
     lists = ["list1", "list2", "list3"]
     return render_template("about.html", myList=lists)
+
+
+@app.route('/contactus')
+def contactUs():
+    return render_template("contactus.html")
+
+
+@app.route('/submitForm')
+def sendSubmitForm():
+    fname = request.args.get('fname')
+    desc = request.args.get('description')
+    return render_template("submitformdone.html", data={"name": fname, "description": desc})
 
 
 @app.route('/admin')

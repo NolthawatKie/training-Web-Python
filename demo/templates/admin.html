@@ -31,7 +31,10 @@
 {% else %}
 <h1>You are not Admin</h1>
 <h1>Please Sign in again</h1>
-<a href="/">Home</a>
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="{{url_for('static', filename = 'picture2.jpg')}}">More picture</a></li>
+</ul>
 {% endif %}
 
 {% endblock %}
