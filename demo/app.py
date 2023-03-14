@@ -2,9 +2,10 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/index')
+@app.route('/')
 def index() :
-    return render_template("index.html")
+    data = {"name" : "Johny", "age" : 35, "salary" : 28000}
+    return render_template("index.html", myData = data)
 
 @app.route('/about')
 def about() :
@@ -12,7 +13,9 @@ def about() :
 
 @app.route('/admin')
 def admin() :
-    return render_template("admin.html")
+    name = "Anonymous"
+    age = 25
+    return render_template("admin.html", myName = name, myAge=age)
 
 @app.route('/user/<name>/<yob>')
 def profile(name, yob) :

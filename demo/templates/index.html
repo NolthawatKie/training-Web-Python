@@ -7,7 +7,15 @@
 </head>
 <body>
     <h1>Hello Flask</h1>
-    <a href="/admin">Admin</a>
-    <a href="/about">About Us</a>
-</body>
+    <nav>
+        <a href="/admin">Admin</a>
+        <a href="/about">About Us</a>    
+    </nav>
+
+    <img src="../static/picture1.jpg" width=600px height=400px alt="pic1">
+
+    <h1>Hi {{myData["name"]}}</h1>
+    <h1>You're {{myData["age"]}} years old</h1>
+    <h1>Your salary is {{myData["salary"]}} THB/month</h1>
+</body> 
 </html>
